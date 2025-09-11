@@ -1,3 +1,7 @@
+A list of project names to be used for creating namespaces.
+Each projectName will be converted to a valid RFC 1123 lowercase label.
 ProjectNames:
- # - projectName: test1
-#  - projectName: test2
+projectName: "frontend-team"
+projectName: "backend-api"
+projectName: "data-services"
+projectName: "sandbox
