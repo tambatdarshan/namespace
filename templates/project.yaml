@@ -1,5 +1,6 @@
 {{ range .Values.ProjectNames }}
 {{ $Name := .projectName }}
+{{- if .projectName }} {{ $Name := .projectName | lower | trimSuffix "-" }}
 ---
 kind: Namespace
 apiVersion: v1
