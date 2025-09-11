@@ -1,8 +1,8 @@
 {{ range .Values.ProjectNames }}
 {{ $Name := .projectName }}
 ---
-kind: Project
-apiVersion: project.openshift.io/v1
+kind: Namespace
+apiVersion: v1
 metadata:
   name: demo-{{ $Name }}
   annotations:
