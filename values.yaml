@@ -1,3 +1,6 @@
 ProjectNames:
-
 #  - projectName: sandro2
+   - projectName: "dev-team"
+   - projectName: "qa-team"
+   - projectName: "staging"
+   - projectName: "demo-project-a"
