@@ -1,13 +1,12 @@
-{{ range .Values.ProjectNames }}
-{{ $Name := .projectName }}
+{{ range .Values.ProjectNames }} {{- if .projectName }} {{ $Name := .projectName | lower | trimSuffix "-" }}
 ---
-kind: Project
-apiVersion: project.openshift.io/v1
+apiVersion: v1
+kind: Namespace
 metadata:
-  name: demo-{{ $Name }}
-  annotations:
-    argocd.argoproj.io/sync-wave: "-1"
-    argocd.argoproj.io/sync-options: Prune=confirm,Delete=true
+name: demo-{{ $Name }}
+annotations:
+argocd.argoproj.io/sync-wave: "-1"
+argocd.argoproj.io/sync-options: Prune=confirm,Delete=true
   labels:
     cool.dbg/cool-tenant: cool-team
     cmdb.dbg/applicationcode: AID734
