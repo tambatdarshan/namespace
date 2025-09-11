@@ -1,4 +1,5 @@
 {{ range .Values.ProjectNames }} {{- if .projectName }} {{ $Name := .projectName | lower | trimSuffix "-" }}
+---
 apiVersion: v1
 kind: Namespace
 metadata:
@@ -6,5 +7,6 @@ name: {{ $Name }}
 annotations:
 argocd.argoproj.io/sync-wave: "-1"
 argocd.argoproj.io/sync-options: Prune=true,Delete=true
+---
 {{- end }}
 {{ end }}
