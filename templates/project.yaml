@@ -9,7 +9,6 @@ metadata:
     argocd.argoproj.io/sync-wave: "-1"
     argocd.argoproj.io/sync-options: Prune=confirm,Delete=true
     argocd.argoproj.io/compare-options: IgnoreExtraneous
-    argocd.argoproj.io/deletion-approved: 2025-09-17T17:43:45Z
   labels:
     cool.dbg/cool-tenant: cool-team
     cmdb.dbg/applicationcode: AID734
